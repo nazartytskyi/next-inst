@@ -55,7 +55,7 @@ const Header: React.FunctionComponent = () => {
           <HomeIcon className='navigationButton' onClick={() => router.push('/')} />
           <MenuIcon className='h-6 md:hidden cursor-pointer' />
 
-          {true ? (
+          {session ? (
             <>
               <div className='relative navigationButton'>
                 <PaperAirplaneIcon className='navigationButton hover:scale-100' />
@@ -67,7 +67,7 @@ const Header: React.FunctionComponent = () => {
               <UserGroupIcon className='navigationButton' />
               <HeartIcon className='navigationButton' />
 
-              {/* <div className='relative w-10 inline-grid cursor-pointer'>
+              <div className='relative w-10 inline-grid cursor-pointer'>
                 <Image
                   className='rounded-full'
                   onClick={() => router.push(`/${session.user?.username}`)}
@@ -78,7 +78,7 @@ const Header: React.FunctionComponent = () => {
                   objectFit='cover'
                   alt='Profile picture'
                 />
-              </div> */}
+              </div>
             </>
           ) : (
             <button onClick={() => signIn()}>Sign In</button>
