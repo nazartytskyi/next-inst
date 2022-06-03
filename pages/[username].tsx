@@ -37,7 +37,7 @@ const Profile = () => {
     }
 
     getUser();
-  });
+  }, [username]);
 
   return (
     <div className='bg-gray-50 h-screen overflow-y-scroll scrollbar-hide'>
